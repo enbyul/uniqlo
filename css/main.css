@@ -1,0 +1,520 @@
+body {
+  background: #ddd;
+  padding-top: 74px;
+  box-sizing: border-box;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid #dadada;
+  background: #fff;
+}
+header > article {
+  width: 1200px;
+  margin: auto;
+  height: 74px;
+  display: flex;
+  align-items: center;
+}
+header h1 {
+  margin-right: 20px;
+}
+header nav {
+  width: 100%;
+}
+header nav .depth1 {
+  display: flex;
+}
+header nav .depth1 > li {
+  padding: 0 15px;
+}
+header nav .depth1 > li > a {
+  display: block;
+  height: 100%;
+  box-sizing: border-box;
+  font-size: 19px;
+  font-weight: bold;
+  padding-top: 11px;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 4px;
+}
+header nav .depth1 > li:hover a {
+  border-color: #000;
+}
+header nav .depth2 {
+  display: none;
+  position: fixed;
+  top: 75px;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  overflow: hidden;
+  overflow-y: scroll;
+  height: 100%;
+  max-height: calc(100% - 74px);
+}
+header nav .depth2.on {
+  display: block;
+}
+header nav .depth2 > article {
+  width: 1200px;
+  margin: auto;
+  padding: 30px 0;
+  position: relative;
+}
+header nav .depth2 > article .close {
+  position: absolute;
+  top: 16px;
+  right: 0;
+  font-weight: bold;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+header nav .depth2 > article .close img {
+  height: 28px;
+}
+header nav .depth2 > article .close p {
+  margin-top: 4px;
+}
+header nav .depth2 > article .top_menu {
+  color: #101010;
+  border-bottom: 1px solid #000;
+  padding-bottom: 3px;
+  margin-left: 10px;
+}
+header nav .depth2 > article .depth2_container {
+  margin-top: 25px;
+  display: flex;
+  font-size: 14px;
+}
+header nav .depth2 > article .depth2_container > div {
+  width: 50%;
+}
+header nav .depth2 > article .depth2_container > div.depth2_left {
+  color: #111;
+}
+header nav .depth2 > article .depth2_container > div.depth2_left > ul {
+  position: relative;
+}
+header nav .depth2 > article .depth2_container > div.depth2_left > ul > li {
+  display: flex;
+}
+header nav .depth2 > article .depth2_container > div.depth2_left > ul > li p {
+  padding: 10px 52px 10px 10px;
+  width: 50%;
+  box-sizing: border-box;
+}
+header nav .depth2 > article .depth2_container > div.depth2_left > ul > li .depth3 {
+  display: none;
+  width: 50%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  z-index: 2;
+}
+header nav .depth2 > article .depth2_container > div.depth2_left > ul > li .depth3 a {
+  display: block;
+  padding: 10px 52px 10px 10px;
+  box-sizing: border-box;
+}
+header nav .depth2 > article .depth2_container > div.depth2_left > ul > li .depth3 a:hover {
+  font-weight: bold;
+}
+header nav .depth2 > article .depth2_container > div.depth2_left > ul > li.on p {
+  background: url(../images/inc/ico_arrow_right.png) #f4f4f4 no-repeat center right 14px/24px auto;
+}
+header nav .depth2 > article .depth2_container > div.depth2_left > ul > li.on .depth3 {
+  display: block;
+}
+header nav .depth2 > article .depth2_container > div.depth2_right {
+  display: flex;
+  border-left: 1px solid #dadada;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+header nav .depth2 > article .depth2_container > div.depth2_right li a {
+  display: block;
+  padding: 10px 52px 10px 10px;
+  box-sizing: border-box;
+}
+header nav .depth2 > article .depth2_container > div.depth2_right h2 {
+  font-size: 15px;
+  padding-bottom: 8px;
+}
+header nav .depth2 > article .depth2_container > div.depth2_right > div {
+  width: 50%;
+}
+header nav .depth2 > article .depth2_container > div.depth2_right > div.depth2_right_2 ul {
+  border-top: 1px solid #dadada;
+  margin-top: 19px;
+  padding-top: 30px;
+}
+header nav .depth2 > article .depth2_container > div.depth2_right > div.depth2_right_2 ul li a {
+  padding-left: 0;
+}
+header nav .depth2 > article .depth2_container > div.depth2_right > div.depth2_right_2 ul:first-of-type {
+  margin-top: 0;
+  padding-top: 0;
+  border: none;
+}
+header nav .depth2 > article .depth2_container > div.depth2_right > div.depth2_right_2 ul .my_page a {
+  padding-left: 26px;
+  background: url(../images/inc/ico_my.png) no-repeat center left 0/20px auto;
+}
+header nav .depth2 > article .depth2_container > div.depth2_right > div.depth2_right_2 ul .offline_shop a {
+  padding-left: 26px;
+  background: url(../images/inc/ico_shop.png) no-repeat center left 0/20px auto;
+}
+header #user_menu > ul {
+  display: flex;
+  width: 204px;
+  justify-content: space-between;
+}
+header #user_menu > ul > li {
+  text-align: center;
+}
+header #user_menu > ul > li article {
+  cursor: pointer;
+}
+header #user_menu > ul > li article > img {
+  height: 32px;
+}
+header #user_menu > ul > li p {
+  font-size: 12px;
+}
+header #user_menu > ul > li.search .search_input_container {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1200px;
+  height: 74px;
+  transform: translateX(-50%);
+  background: #fff;
+  z-index: 2;
+  display: none;
+  justify-content: space-between;
+  padding: 11px 0;
+  box-sizing: border-box;
+}
+header #user_menu > ul > li.search .search_input_container.on {
+  display: flex;
+}
+header #user_menu > ul > li.search .search_input_container .search_input {
+  display: flex;
+  flex-grow: 1;
+}
+header #user_menu > ul > li.search .search_input_container .search_input input {
+  height: 100%;
+  width: 100%;
+  padding: 15px 87px 15px 20px;
+  border: 1px solid #ababab;
+  font-size: 16px;
+  color: #111;
+  box-sizing: border-box;
+}
+header #user_menu > ul > li.search .search_input_container .search_input button {
+  width: 48px;
+  height: 100%;
+  background: #000;
+}
+header #user_menu > ul > li.search .search_input_container .search_input button img {
+  width: 32px;
+}
+header #user_menu > ul > li.search .search_input_container .close {
+  padding: 0 10px;
+  margin-left: 20px;
+}
+header #user_menu > ul > li.search .search_input_container .close img {
+  height: 24px;
+}
+header #user_menu > ul > li.search .search_input_container .close p {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 6px;
+}
+header #user_menu > ul > li.login .login_modal_popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  display: none;
+}
+header #user_menu > ul > li.login .login_modal_popup .dim {
+  background: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+}
+header #user_menu > ul > li.login .login_modal_popup.on {
+  display: block;
+}
+header #user_menu > ul > li.login .login_modal_popup article {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 10px;
+  width: 484px;
+  padding: 50px;
+  box-sizing: border-box;
+}
+header #user_menu > ul > li.login .login_modal_popup article h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #b2b2b2;
+  padding-bottom: 10px;
+}
+header #user_menu > ul > li.login .login_modal_popup article h3 div {
+  display: flex;
+  align-items: center;
+}
+header #user_menu > ul > li.login .login_modal_popup article h3 div img {
+  margin-right: 10px;
+  width: 30px;
+}
+header #user_menu > ul > li.login .login_modal_popup article h3 .close {
+  cursor: pointer;
+}
+header #user_menu > ul > li.login .login_modal_popup article h3 .close img {
+  width: 32px;
+}
+header #user_menu > ul > li.login .login_modal_popup article h3 p {
+  font-size: 26px;
+  font-weight: bold;
+}
+header #user_menu > ul > li.login .login_modal_popup article .login_tabs {
+  display: flex;
+  margin-top: 40px;
+}
+header #user_menu > ul > li.login .login_modal_popup article .login_tabs li {
+  flex-grow: 1;
+  font-size: 16px;
+  font-weight: bold;
+  color: #757575;
+  background: #f1f1f1;
+  height: 44px;
+  line-height: 46px;
+  border: 1px solid #fff;
+  border-bottom-color: #acacac;
+  cursor: pointer;
+}
+header #user_menu > ul > li.login .login_modal_popup article .login_tabs li.on {
+  background: #fff;
+  border-color: #acacac;
+  border-bottom-color: #fff;
+}
+header #user_menu > ul > li.login .login_modal_popup article .membership {
+  margin-top: 40px;
+}
+header #user_menu > ul > li.login .login_modal_popup article .membership > div {
+  display: none;
+}
+header #user_menu > ul > li.login .login_modal_popup article .membership > div.on {
+  display: block;
+}
+header #user_menu > ul > li.login .login_modal_popup article .membership > div form .id_auto_save_chk {
+  text-align: right;
+}
+header #user_menu > ul > li.login .login_modal_popup article .membership > div form .id_auto_save_chk label {
+  font-size: 12px;
+}
+header #user_menu > ul > li.login .login_modal_popup article .membership > div form > input {
+  height: 33px;
+  width: 100%;
+  border: 1px solid #e3e3e3;
+  padding: 6px 12px 5px;
+  box-sizing: border-box;
+  margin-bottom: 8px;
+}
+header #user_menu > ul > li.login .login_modal_popup article .membership > div form .login_btn {
+  background: #fe0000;
+  color: #fff;
+  font-weight: bold;
+  width: 100%;
+  height: 43px;
+}
+header #user_menu > ul > li.login .login_modal_popup article .membership > div .sign_up_container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+header #user_menu > ul > li.login .login_modal_popup article .membership > div .sign_up_container .find_user {
+  display: flex;
+  justify-content: space-between;
+  width: 170px;
+}
+header #user_menu > ul > li.login .login_modal_popup article .membership > div .sign_up_container .find_id,
+header #user_menu > ul > li.login .login_modal_popup article .membership > div .sign_up_container .find_pw,
+header #user_menu > ul > li.login .login_modal_popup article .membership > div .sign_up_container .sign_up {
+  font-size: 12px;
+  color: #5a5a5a;
+  background: url(../images/inc/login_go.png) no-repeat center right 0;
+  padding-right: 15px;
+}
+header #user_menu > ul > li.login .login_modal_popup article .membership > div .sns_login .sns_title {
+  position: relative;
+  margin-top: 30px;
+}
+header #user_menu > ul > li.login .login_modal_popup article .membership > div .sns_login .sns_title:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #e3e3e3;
+  z-index: -1;
+}
+header #user_menu > ul > li.login .login_modal_popup article .membership > div .sns_login .sns_title b {
+  padding: 0 22px;
+  background: #fff;
+  color: #666;
+}
+header #user_menu > ul > li.login .login_modal_popup article .membership > div .sns_login ul {
+  display: flex;
+  justify-content: space-between;
+  width: 280px;
+  margin: auto;
+  margin-top: 30px;
+}
+header #user_menu > ul > li.login .login_modal_popup article .membership > div .sns_login ul li {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ddd;
+}
+header #user_menu > ul > li.login .login_modal_popup article .membership > div .sns_login ul li.naver {
+  background-color: #1fc700;
+}
+header #user_menu > ul > li.login .login_modal_popup article .membership > div .sns_login ul li.facebook {
+  background: #395b9a;
+}
+header #user_menu > ul > li.login .login_modal_popup article .membership > div .sns_login ul li.kakao {
+  background: #ffe600;
+}
+header #user_menu > ul > li.login .login_modal_popup article .membership > div .sns_login ul li.apple {
+  background: #000;
+}
+header #user_menu > ul > li.login .login_modal_popup article .membership > div.non-members p {
+  text-align: left;
+  color: #888;
+  padding-left: 6px;
+  position: relative;
+  margin-bottom: 20px;
+}
+header #user_menu > ul > li.login .login_modal_popup article .membership > div.non-members p:before {
+  content: "";
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background: #888;
+  position: absolute;
+  top: calc(50% - 1px);
+  left: 0;
+}
+header #user_menu > ul > li.cart {
+  position: relative;
+}
+header #user_menu > ul > li.cart .cart_count {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  background: #000;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 18px;
+  color: #fff;
+  font-size: 11px;
+  transform: translate(-3px, -23px);
+}
+
+.fullpage_wrap {
+  height: calc(100% - 74px) !important;
+  margin-top: 74px;
+  overflow: hidden;
+}
+.fullpage_wrap #main_fullpage .slide {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.fullpage_wrap #main_fullpage .slide.slide1_1 {
+  background-image: url(../images/main/main_section1_1.jpg);
+}
+.fullpage_wrap #main_fullpage .slide.slide1_2 {
+  background-image: url(../images/main/main_section1_2.jpg);
+}
+.fullpage_wrap #main_fullpage .slide.slide1_3 {
+  background-image: url(../images/main/main_section1_3.jpg);
+}
+.fullpage_wrap #main_fullpage .slide .fp-overflow {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.fullpage_wrap #main_fullpage .slide .fp-overflow img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.fullpage_wrap #main_fullpage .slide .fp-overflow .txt_container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -566px;
+  width: 1132px;
+  transform: translateY(-50%);
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+.fullpage_wrap #main_fullpage .slide .fp-overflow .txt_container h4 {
+  font-size: 30px;
+}
+.fullpage_wrap #main_fullpage .slide .fp-overflow .txt_container .product {
+  font-size: 16px;
+  margin-top: 24px;
+}
+.fullpage_wrap #main_fullpage .slide .fp-overflow .txt_container s {
+  font-size: 20px;
+  margin-top: 15px;
+  display: block;
+}
+.fullpage_wrap #main_fullpage .slide .fp-overflow .txt_container .sale_price {
+  color: red;
+}
+.fullpage_wrap #main_fullpage .slide .fp-overflow .txt_container .sale_price p {
+  font-size: 35px;
+  margin-top: 5px;
+}
+.fullpage_wrap #main_fullpage .slide .fp-overflow .txt_container .sale_price span {
+  font-size: 16px;
+  margin-top: 2px;
+}
+.fullpage_wrap #main_fullpage .fp-arrow {
+  width: 20px;
+  height: 54px;
+  border: none;
+}
+.fullpage_wrap #main_fullpage .fp-arrow.fp-prev {
+  background: url(../images/main/arrow_prev.svg) no-repeat 0 0;
+}
+.fullpage_wrap #main_fullpage .fp-arrow.fp-next {
+  background: url(../images/main/arrow_next.svg) no-repeat 0 0;
+}
+
+/*# sourceMappingURL=main.css.map */
